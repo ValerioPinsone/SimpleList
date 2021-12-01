@@ -2,4 +2,14 @@
   <span>Simple List Test</span>
 </mat-toolbar>
 
-<app-lista></app-lista>
+
+
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>
+    <app-lista></app-lista>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-lista-db></app-lista-db>
+  </mat-grid-tile>
+  
+</mat-grid-list>

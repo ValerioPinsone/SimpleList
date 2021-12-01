@@ -1,3 +1,4 @@
+/* LISTA DB */
 .lista-container {
     width: 100%;
     text-align: center;
@@ -39,8 +40,4 @@ input {
 
 .mat-icon {
     margin-top: -16px;
-}
-#uploadButton {
-    background-color: green;
-    margin-left: 10px;
 }

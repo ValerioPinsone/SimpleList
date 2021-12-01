@@ -15,11 +15,14 @@ import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
+import { ListaDbComponent } from './lista-db/lista-db.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaComponent
+    ListaComponent,
+    ListaDbComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatButtonModule,
     MatInputModule,
     FormsModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
