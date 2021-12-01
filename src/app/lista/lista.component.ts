@@ -7,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaComponent implements OnInit {
 
-
-  //lista : String[] = ["prova","prova2"];
-  lista = new Array("test");
+  lista = new Array("Elemento prova");
   inserimento: string = "";
 
   constructor() { }

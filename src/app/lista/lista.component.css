@@ -6,12 +6,10 @@
 
 .lista {
     width:400px;
-    
     text-align: center;
     background-color: rgb(68, 68, 68);
     margin:10px auto;
-    
-    
+
 }
 
  mat-form-field{
