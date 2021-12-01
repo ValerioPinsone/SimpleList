@@ -9,12 +9,10 @@
     text-align: center;
     background-color: rgb(68, 68, 68);
     margin:10px auto;
-
 }
 
  mat-form-field{
     width:400px;
-    
 }
 
 .list-number{
@@ -28,8 +26,7 @@ input {
 }
 
 .lista > mat-list-item {
-    text-align: center;
-    
+    text-align: center; 
 }
 
 .cancella-button{
@@ -38,7 +35,6 @@ input {
     position: absolute;
     margin-left:340px;
     margin-top: -8px;
-
 }
 
 .mat-icon {
