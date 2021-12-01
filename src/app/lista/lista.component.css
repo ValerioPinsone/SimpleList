@@ -1,0 +1,44 @@
+.lista-container {
+    width: 100%;
+    text-align: center;
+}
+
+
+.lista {
+    width:400px;
+    
+    text-align: center;
+    background-color: rgb(68, 68, 68);
+    margin:10px auto;
+    
+    
+}
+
+ mat-form-field{
+    width:400px;
+    
+}
+
+input {
+    
+    padding:2px;
+    color:wheat;
+}
+
+.lista > mat-list-item {
+    text-align: center;
+    
+}
+
+.cancella-button{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin-left:340px;
+    margin-top: -8px;
+
+}
+
+.mat-icon {
+    margin-top: -16px;
+}

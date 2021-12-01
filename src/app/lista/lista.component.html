@@ -1,0 +1,23 @@
+
+
+
+<div class="lista-container">
+    <mat-list class="lista">
+        <mat-list-item *ngFor="let elemento of lista;let i = index"> 
+            {{elemento}} 
+            
+            <button mat-fab color="primary" aria-label="Cancella" class="cancella-button" value="{{lista[0]}}" (click)="rimuovi(i)">
+                <mat-icon>delete</mat-icon>
+            </button>
+
+        </mat-list-item>
+    </mat-list>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Aggiungi elemento</mat-label>
+        <input matInput placeholder="elemento" value="" [(ngModel)]="inserimento">
+    </mat-form-field>
+    <br>
+
+    <button mat-raised-button color="primary" (click)="aggiungi()">Aggiungi</button>
+</div>
