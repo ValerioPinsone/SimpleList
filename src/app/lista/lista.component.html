@@ -15,7 +15,7 @@
 
     <mat-form-field appearance="fill">
         <mat-label>Aggiungi elemento</mat-label>
-        <input matInput placeholder="elemento" value="" [(ngModel)]="inserimento">
+        <input matInput placeholder="elemento" value="" [(ngModel)]="inserimento" (keyup.enter)="aggiungi()">
     </mat-form-field>
     <br>
 
