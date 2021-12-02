@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-lista-db',
@@ -7,12 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaDbComponent implements OnInit {
 
+  loading: boolean = false;
   lista = new Array("Elemento prova");
   inserimento: string = "";
   
-  constructor() { }
+  constructor(public http: HttpClient) { }
 
   ngOnInit(): void {
+
+    this.caricaLista();
   }
 
   aggiungi(){
@@ -24,5 +29,15 @@ export class ListaDbComponent implements OnInit {
   rimuovi(id:number){
     this.lista.splice(id,1);
   }
+
+  caricaLista(): void{
+    this.loading = true;
+    this.http.get("http://localhost:8086/lista").subscribe(res=> {
+      console.log(res);
+    });
+
+    this.loading = false;
+  }
+
 
 }

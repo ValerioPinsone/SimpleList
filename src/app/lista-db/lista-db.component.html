@@ -2,6 +2,7 @@
 
 
 <div class="lista-container">
+    <h2 *ngIf="loading">Loading...</h2>
     <mat-list class="lista">
         <mat-list-item *ngFor="let elemento of lista;let i = index"> 
             <div class="list-number">{{i+1}}:&nbsp;&nbsp;</div>{{elemento}}

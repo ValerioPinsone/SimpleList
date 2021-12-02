@@ -18,6 +18,10 @@ import {MatIconModule} from '@angular/material/icon';
 import { ListaDbComponent } from './lista-db/lista-db.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 
+
+//http
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +38,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatInputModule,
     FormsModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
