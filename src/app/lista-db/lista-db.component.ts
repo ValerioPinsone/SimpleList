@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Lista } from '../models/lista.model';
 
 @Component({
   selector: 'app-lista-db',
@@ -10,6 +11,7 @@ import { Observable } from 'rxjs';
 export class ListaDbComponent implements OnInit {
 
   loading: boolean = false;
+  lista_obj: Lista[] = new Array();
   lista = new Array("Elemento prova");
   inserimento: string = "";
   
@@ -32,8 +34,10 @@ export class ListaDbComponent implements OnInit {
 
   caricaLista(): void{
     this.loading = true;
-    this.http.get("http://localhost:8086/lista").subscribe(res=> {
+    this.http.get<Lista[]>("http://localhost:8086/lista").subscribe(res=> {
       console.log(res);
+      this.lista_obj = res;
+      
     });
 
     this.loading = false;
