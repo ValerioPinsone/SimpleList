@@ -35,7 +35,7 @@ export class ListaDbComponent implements OnInit {
   caricaLista(): void{
     this.loading = true;
     this.http.get<Lista[]>("http://localhost:8086/lista").subscribe(res=> {
-      console.log(res);
+      //console.log(res);
       this.lista_obj = res;
       
     });
