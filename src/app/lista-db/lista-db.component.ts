@@ -29,8 +29,10 @@ export class ListaDbComponent implements OnInit {
   }
 
   rimuovi(id:number){
-    this.loading = true;
-    this.http.delete("http://localhost:8086/lista/elimina/"+id).subscribe(() => this.loading = false);
+    //this.loading = true;
+    this.http.delete("http://localhost:8086/lista/elimina/"+id).subscribe(() => 
+    //this.loading = false
+    this.ngOnInit());
   }
 
   caricaLista(): void{
