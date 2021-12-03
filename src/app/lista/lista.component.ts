@@ -9,7 +9,7 @@ import { ListaDbComponent } from '../lista-db/lista-db.component';
 })
 export class ListaComponent implements OnInit {
 
-  lista = new Array("Elemento prova");
+  lista = new Array();
   lista_export = [{valore_lista: ""}];
   inserimento: string = "";
 
@@ -30,8 +30,11 @@ export class ListaComponent implements OnInit {
 
   //Aggiungere refresh del componente lista-db
   aggiungiDb(){
-    for(let i:number=1; i<this.lista.length; i++){
-      this.lista_export.push({valore_lista: this.lista[i]});
+    this.lista_export.pop();
+    for(let i:number=0; i<this.lista.length; i++){
+      
+        this.lista_export.push({valore_lista: this.lista[i]});
+      
     }
     
     this.http.post<any>("http://localhost:8086/lista/inseriscimultiplo",this.lista_export).subscribe();
