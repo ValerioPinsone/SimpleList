@@ -42,7 +42,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatGridListModule,
     HttpClientModule
   ],
+  exports:[ ListaDbComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
