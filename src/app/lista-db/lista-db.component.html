@@ -7,7 +7,8 @@
         <mat-list-item *ngFor="let elemento of lista_obj;let i = index"> 
             <div class="list-number">{{i+1}}:&nbsp;&nbsp;</div>{{elemento.valore_lista}}
             
-            <button mat-fab color="primary" aria-label="Cancella" class="cancella-button" value="{{lista[0]}}" (click)="rimuovi(i)">
+            <button mat-fab color="primary" aria-label="Cancella" class="cancella-button" value="{{lista[0]}}" (click)="rimuovi(elemento.id_lista)">
+                
                 <mat-icon>delete</mat-icon>
             </button>
 

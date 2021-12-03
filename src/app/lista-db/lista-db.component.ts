@@ -29,7 +29,8 @@ export class ListaDbComponent implements OnInit {
   }
 
   rimuovi(id:number){
-    this.lista.splice(id,1);
+    this.loading = true;
+    this.http.delete("http://localhost:8086/lista/elimina/"+id).subscribe(() => this.loading = false);
   }
 
   caricaLista(): void{
